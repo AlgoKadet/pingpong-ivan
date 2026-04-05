@@ -50,6 +50,7 @@ class Player(GameSprite):
 
 # класс спрайта-врага   
 class Ball(GameSprite):
+    pass
     # движение врага
     #def update(self):
    #     self.rect.y += self.speed
@@ -63,7 +64,7 @@ raket_2 = Player('table-tennis-racket-and-ball-clipart-design-illustration-free-
 ball = Ball('1_1735.png', 250, 250, 40, 40, 7)
 
 display.set_caption("Ping Pong")
-window = display.set_mode((win_width, win_height))
+window = display.set_mode((500, 500))
 background = transform.scale((500, 500))
 window.fill((0,0,0))
  
@@ -92,7 +93,7 @@ while run:
         ball.reset()
  
         # проверка столкновения пули и монстров (и монстр, и пуля при касании исчезают)
-       if ball.rect.x == 20:
+        if ball.rect.x == 20:
             window.blit(win2, (200, 200))
         if ball.rect.x == 480:
             window.blit(win1, (200, 200))
